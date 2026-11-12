@@ -8,8 +8,6 @@ import re
 import time
 from pathlib import Path
 
-from sentence_transformers import SentenceTransformer
-
 from app.api.documents import DocumentRepository
 from app.api.hybrid_evidence import calibrate_distance_gate, resolve_gated_candidates
 from app.api.pg_hybrid_search import PgHybridSearch
@@ -24,7 +22,7 @@ CASES = Path(__file__).with_name("hybrid_search_cases.json")
 MODEL_REVISION = "1d2363c5de6ce9ba9c890c8e23a4c72dce540ca8"
 
 
-def semantic_source_quote(model: SentenceTransformer, question_vector, text: str) -> str | None:
+def semantic_source_quote(model, question_vector, text: str) -> str | None:
     """Pick an exact source sentence by embedding similarity, without rewriting it."""
     sentences = [match.group().strip() for match in re.finditer(r"[^。！？!?；;]+[。！？!?；;]?", text)
                  if match.group().strip()]
@@ -36,6 +34,8 @@ def semantic_source_quote(model: SentenceTransformer, question_vector, text: str
 
 
 def evaluate(dsn: str) -> dict:
+    from sentence_transformers import SentenceTransformer
+
     cases = json.loads(CASES.read_text(encoding="utf-8"))
     model = SentenceTransformer("BAAI/bge-small-zh", revision=MODEL_REVISION,
                                 local_files_only=True)

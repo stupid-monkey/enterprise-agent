@@ -7,8 +7,6 @@ import os
 import time
 from pathlib import Path
 
-from sentence_transformers import SentenceTransformer
-
 from app.api.documents import DocumentRepository
 from app.api.hybrid_evidence import resolve_gated_candidates
 from app.api.pg_hybrid_search import PgHybridSearch
@@ -78,6 +76,8 @@ def load_documents(repository: DocumentRepository, rows: list[dict], identities:
 
 
 def evaluate(dsn: str, *, suite: str = "independent-v1") -> dict:
+    from sentence_transformers import SentenceTransformer
+
     document_path, case_path = SUITES[suite]
     document_rows = json.loads(document_path.read_text(encoding="utf-8"))
     cases = json.loads(case_path.read_text(encoding="utf-8"))
