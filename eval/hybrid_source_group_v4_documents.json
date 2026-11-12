@@ -1,0 +1,12 @@
+[
+  {"key":"relocation","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"员工搬迁补贴办理","text":"跨城市调岗员工可在入职新岗位后三十天内申请一次性搬迁补贴三千元。申请应附租房合同，行政部门核对地址。","published":true},
+  {"key":"visitor_badge","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"访客证管理","text":"访客证由前台在入园时发放，访客离园当日交还。借用访客证须登记三十元押金，返还时退回押金。","published":true},
+  {"key":"account_lock","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"账号登录保护","text":"员工账号连续五次输入错误密码后立即锁定。锁定后应联系服务台核实身份；相关安全事件在次日由信息安全员归档。","published":true},
+  {"key":"safety_course","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"安全课程通知","text":"年度安全课程安排在每年九月第二周，报名截止时间为开课前五个工作日。考试成绩由人事部门记录。","published":true},
+  {"key":"mobile_release","org":"demo-org","department":"product","visibility":"department","area":"产品资料","title":"移动应用发布门禁","text":"移动应用灰度发布连续十五分钟崩溃率超过百分之四时停止放量，并由产品负责人启动回滚。","published":true},
+  {"key":"supplier_reconcile","org":"demo-org","department":"finance","visibility":"department","area":"财务资料","title":"供应商月度对账","text":"财务团队每月第七个工作日完成供应商对账。对账差异应在两个工作日内提交财务经理复核。","published":true},
+  {"key":"alert_escalation","org":"demo-org","department":"operations","visibility":"department","area":"运维资料","title":"告警升级流程","text":"核心服务告警持续十分钟未恢复时，值班工程师通知运维负责人。重大故障另需保存事件时间线。","published":true},
+  {"key":"secret_contract","org":"demo-org","department":"product","visibility":"allowlist","area":"项目空间","title":"保密项目合同节点","text":"保密项目合同应在十二月十五日前完成签署，只有项目负责人可以查看合同进度。","published":true},
+  {"key":"other_night","org":"other-org","department":"general","visibility":"organization","area":"制度规范","title":"另一组织夜班补贴","text":"另一组织夜班补贴为每小时一百二十元，由排班员在次月核对工时。","published":true},
+  {"key":"draft_flex","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"弹性打卡未发布草案","text":"草案建议周一弹性打卡可延后两小时，仍在审批中，尚未发布。","published":false}
+]

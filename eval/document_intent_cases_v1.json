@@ -1,0 +1,25 @@
+{
+  "dataset_version": "document-intent-synthetic-v1",
+  "cases": [
+    {"id": "d01_meeting_brief", "split": "dev", "question": "把本周产品发布检查结果整理成能在部门例会上讲的内容", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "d02_new_hire_instructions", "split": "dev", "question": "根据差旅制度帮我准备一段可发给新员工的办理说明", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "d03_manager_review", "split": "dev", "question": "能把项目风险和处理进度梳理成给负责人过目的版本吗", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "d04_team_leave_note", "split": "dev", "question": "我要拿这些年假规定向团队做说明，帮我准备好可直接发的文字", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "d05_training_material", "split": "dev", "question": "把内部培训的要求转成一份可直接用于部门分享的材料", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "d06_leave_fact", "split": "dev", "question": "员工年假满三年有多少天？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "d07_approval_fact", "split": "dev", "question": "差旅报销应该先找谁审批？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "d08_generic_weekly_advice", "split": "dev", "question": "写项目周报时一般要包含哪些部分？", "expected_intent": "general", "expected_document": false},
+    {"id": "d09_report_question", "split": "dev", "question": "这份报告里提到的风险有哪些？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "d10_briefing_advice", "split": "dev", "question": "给领导汇报年假制度时应该注意哪些问题？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "h01_supervisor_brief", "split": "holdout", "question": "我们公司的产品发布事项请梳理一下，作为明天向主管汇报的底稿", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "h02_department_message", "split": "holdout", "question": "把员工休假办法变成一页可以直接发到部门群的说明", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "h03_onboarding_reading", "split": "holdout", "question": "请用公司内部的差旅规则准备给新同事入职时阅读的内容", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "h04_spoken_script", "split": "holdout", "question": "把季度项目进展提炼为开会时能直接照着念的稿子", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "h05_finance_copy", "split": "holdout", "question": "想要一版能交给财务确认的报销流程文字，请帮我整出来", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "h06_release_fact", "split": "holdout", "question": "我们公司的产品发布检查项都有哪些？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "h07_template_location", "split": "holdout", "question": "请问部门例会汇报材料的模板放在哪里？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "h08_explain_weekly", "split": "holdout", "question": "能不能解释一下这份周报的结论？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "h09_report_owner", "split": "holdout", "question": "给领导看的项目报告现在是谁维护？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "h10_no_file", "split": "holdout", "question": "把差旅规则简单说一下就行，不用生成文件", "expected_intent": "knowledge", "expected_document": false}
+  ]
+}

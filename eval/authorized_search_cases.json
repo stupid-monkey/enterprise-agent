@@ -1,0 +1,10 @@
+[
+  {"name": "employee_travel", "role": "employee", "question": "出差报销需要哪些审批？", "expected_id": "1", "expected_answer": "部门负责人审批"},
+  {"name": "employee_leave", "role": "employee", "question": "工作满一年有多少年假？", "expected_id": "2", "expected_answer": "5 天年假"},
+  {"name": "manager_release", "role": "manager", "question": "产品发布前有哪些检查项？", "expected_id": "5", "expected_answer": "安全测试"},
+  {"name": "manager_roadmap", "role": "manager", "question": "产品迭代路线图有哪些重点？", "expected_id": "3", "expected_answer": "知识检索"},
+  {"name": "employee_restricted", "role": "employee", "question": "产品发布前有哪些检查项？", "expected_id": null},
+  {"name": "admin_no_business_access", "role": "admin", "question": "出差报销需要哪些审批？", "expected_id": null},
+  {"name": "employee_no_evidence", "role": "employee", "question": "病假证明怎么办？", "expected_id": null},
+  {"name": "manager_area_filter", "role": "manager", "question": "产品发布前有哪些检查项？", "area": "制度规范", "expected_id": null}
+]

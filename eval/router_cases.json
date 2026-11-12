@@ -1,0 +1,82 @@
+[
+  {
+    "input": "我是算法工程师",
+    "expected": "PROFILE_UPDATE"
+  },
+  {
+    "input": "我是一名后端工程师",
+    "expected": "PROFILE_UPDATE"
+  },
+  {
+    "input": "负责计算机视觉方向",
+    "expected": "PROFILE_UPDATE"
+  },
+  {
+    "input": "我最近在做图像分割项目",
+    "expected": "PROFILE_UPDATE"
+  },
+  {
+    "input": "以后回答尽量简洁一点",
+    "expected": "PROFILE_UPDATE"
+  },
+  {
+    "input": "我是做什么工作的",
+    "expected": "PROFILE_QUERY"
+  },
+  {
+    "input": "我现在负责什么项目？",
+    "expected": "PROFILE_QUERY"
+  },
+  {
+    "input": "我的工作方向是什么？",
+    "expected": "PROFILE_QUERY"
+  },
+  {
+    "input": "我的回答偏好是什么？",
+    "expected": "PROFILE_QUERY"
+  },
+  {
+    "input": "25乘以8",
+    "expected": "CALCULATOR"
+  },
+  {
+    "input": "100除以4",
+    "expected": "CALCULATOR"
+  },
+  {
+    "input": "12 + 18",
+    "expected": "CALCULATOR"
+  },
+  {
+    "input": "计算35减去17",
+    "expected": "CALCULATOR"
+  },
+  {
+    "input": "公司报销多久到账？",
+    "expected": "KNOWLEDGE"
+  },
+  {
+    "input": "公司的年假有多少天？",
+    "expected": "KNOWLEDGE"
+  },
+  {
+    "input": "公司的年终奖怎么发？",
+    "expected": "KNOWLEDGE"
+  },
+  {
+    "input": "公司的福利政策是什么？",
+    "expected": "KNOWLEDGE"
+  },
+  {
+    "input": "你好",
+    "expected": "CHAT"
+  },
+  {
+    "input": "谢谢",
+    "expected": "CHAT"
+  },
+  {
+    "input": "晚上好",
+    "expected": "CHAT"
+  }
+]

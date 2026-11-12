@@ -1,0 +1,13 @@
+[
+  {"key":"equipment_exit","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"离职设备交接流程","text":"员工离职时须在最后工作日十六点前将公司笔记本交还资产管理员。管理员核对序列号并出具交接回执；设备损坏另行登记处理。","published":true},
+  {"key":"guest_network","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"访客无线网络账号","text":"访客无线网络临时账号由接待员工在前台申请，自首次登录起有效六小时。账号到期后自动失效，接待员工可提交新的申请。","published":true},
+  {"key":"lab_reservation","org":"demo-org","department":"general","visibility":"organization","area":"行政指南","title":"创新实验室预约","text":"使用创新实验室须至少提前两个工作日提交预约单。取消预约应通知行政值班员，管理员在当天更新场地日历。","published":true},
+  {"key":"childcare_support","org":"demo-org","department":"general","visibility":"organization","area":"福利政策","title":"员工托育补助","text":"符合条件的员工每年可申请一次托育补助五百元，申请窗口为每年六月。补助在审批后的下一个发薪日发放。","published":true},
+  {"key":"feature_freeze","org":"demo-org","department":"product","visibility":"department","area":"产品资料","title":"产品功能封板安排","text":"产品负责人应在计划上线日前两个工作日完成需求封板。封板后新增需求须进入下一发布周期，紧急安全修复由负责人单独审批。","published":true},
+  {"key":"invoice_intake","org":"demo-org","department":"finance","visibility":"department","area":"财务资料","title":"电子发票集中收件","text":"各部门应在每月第三个工作日中午前将上月电子发票提交到财务收件箱。系统自动回传收件编号，财务专员随后核对抬头与税号。","published":true},
+  {"key":"restore_drill","org":"demo-org","department":"operations","visibility":"department","area":"运维资料","title":"数据库恢复演练记录","text":"运维团队每季度开展一次数据库恢复演练，演练目标是在四十五分钟内恢复测试环境。演练完成后两天内归档操作日志。","published":true},
+  {"key":"secret_license","org":"demo-org","department":"product","visibility":"allowlist","area":"项目空间","title":"保密授权续期节点","text":"保密产品授权应在十一月二十日前完成续期签署；只有产品负责人可以查看续期材料。法务在签署后保存最终版本。","published":true},
+  {"key":"other_vehicle","org":"other-org","department":"general","visibility":"organization","area":"制度规范","title":"另一组织公务车还车","text":"另一组织公务车须在任务结束后次日十点前归还车队。驾驶员还车时填写里程表并交回油卡。","published":true},
+  {"key":"customer_export","org":"demo-org","department":"product","visibility":"department","area":"产品资料","title":"客户试用数据导出","text":"客户试用数据导出申请由产品负责人审批，导出的压缩包在下载后七天内从临时目录删除。每次导出都应记录工单编号。","published":true},
+  {"key":"draft_meal","org":"demo-org","department":"general","visibility":"organization","area":"福利政策","title":"夜班餐补未发布草案","text":"草案拟将夜班餐补调整为每次八十元，尚在审批中，未作为现行制度发布。","published":false}
+]

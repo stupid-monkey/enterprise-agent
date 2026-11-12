@@ -1,0 +1,13 @@
+.env
+.venv/
+.git/
+.agents/
+.codex/
+__pycache__/
+*.pyc
+data/
+frontend/
+prototype/
+docs/
+eval/
+tests/

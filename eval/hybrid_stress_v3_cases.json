@@ -1,0 +1,23 @@
+[
+  {"name":"meal_compare","role":"employee","question":"上海和深圳的午餐补贴标准不同吗？","expected_key":"meal_policy","expected_fact":"标准不同"},
+  {"name":"repair_cap","role":"employee","question":"显示器维修每次最多能报多少钱？","expected_key":"screen_repair","expected_fact":"一百五十元"},
+  {"name":"exam_pass","role":"employee","question":"合规考试多少分算通过？","expected_key":"exam_rules","expected_fact":"八十分"},
+  {"name":"hotel_compare_inferred","role":"employee","question":"北京和上海的住宿报销上限一样吗？","expected_key":"hotel_limits","expected_fact":"五百元"},
+  {"name":"purchase_notice_days","role":"employee","question":"采购评审提前几天发通知？","expected_key":"purchase_notice","expected_fact":"三个工作日"},
+  {"name":"rollout_stop","role":"product","question":"移动端灰度错误率达到什么条件暂停放量？","expected_key":"rollout","expected_fact":"百分之三"},
+  {"name":"settlement_day","role":"finance","question":"供应商结算每月第几个工作日完成？","expected_key":"settlement","expected_fact":"第六个工作日"},
+  {"name":"restore_frequency","role":"operations","question":"数据库恢复演练每季度几次？","expected_key":"restore_drill","expected_fact":"每季度执行一次"},
+  {"name":"secret_second_stage","role":"product","question":"机密项目第二阶段在几月验收？","expected_key":"secret_milestone","expected_fact":"十二月"},
+  {"name":"other_timeoff","role":"outsider","question":"加班换休多少天内申请？","expected_key":"other_overtime","expected_fact":"三十天"},
+  {"name":"transport_compare","role":"employee","question":"上海和深圳的交通补贴标准不同吗？","expected_key":null},
+  {"name":"repair_monthly_cap","role":"employee","question":"显示器维修每月最多能报多少钱？","expected_key":null},
+  {"name":"exam_max_score","role":"employee","question":"合规考试满分是多少分？","expected_key":null},
+  {"name":"temperature_compare","role":"employee","question":"上海和北京的机房温度标准一样吗？","expected_key":null},
+  {"name":"purchase_approval_days","role":"employee","question":"采购合同审批需要几个工作日？","expected_key":null},
+  {"name":"rollout_denied","role":"employee","question":"移动端灰度错误率达到什么条件暂停放量？","expected_key":null},
+  {"name":"finance_denied","role":"product","question":"供应商结算每月第几个工作日完成？","expected_key":null},
+  {"name":"secret_denied","role":"employee","question":"机密项目第二阶段在几月验收？","expected_key":null},
+  {"name":"draft_denied","role":"employee","question":"每周哪天弹性办公？","expected_key":null},
+  {"name":"other_org_denied","role":"employee","question":"另一组织加班换休多少天内申请？","expected_key":null},
+  {"name":"area_mismatch","role":"product","question":"移动端灰度错误率达到什么条件暂停放量？","area":"制度规范","expected_key":null}
+]

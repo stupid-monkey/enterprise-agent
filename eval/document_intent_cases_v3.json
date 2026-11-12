@@ -1,0 +1,15 @@
+{
+  "dataset_version": "document-intent-synthetic-v3",
+  "cases": [
+    {"id": "v3_p01_review_draft", "split": "holdout", "question": "我们公司的产品验收情况，给下周复盘会弄个可讨论的初稿", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v3_p02_staff_note", "split": "holdout", "question": "请依据员工休假办法，备一段可以直接贴到内部公告的文字", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v3_p03_expense_handout", "split": "holdout", "question": "差旅审批顺序帮我转成新同事入职手册里的一段", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v3_p04_release_update", "split": "holdout", "question": "我需要一版给主管过目的发布进度材料，按公司现有资料来", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v3_p05_project_script", "split": "holdout", "question": "按照项目记录做一段可在例会上直接宣读的进展说明", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v3_n01_leave_amount", "split": "holdout", "question": "请问我们公司年假满十年能休几天？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "v3_n02_expense_fact", "split": "holdout", "question": "差旅制度中财务审核排在谁后面？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "v3_n03_source_read", "split": "holdout", "question": "我只想看发布检查清单原文，不需要你整理", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "v3_n04_report_definition", "split": "holdout", "question": "项目周报和项目月报有什么区别？", "expected_intent": "general", "expected_document": false},
+    {"id": "v3_n05_policy_question", "split": "holdout", "question": "准备报销时必须附上哪些凭证？", "expected_intent": "knowledge", "expected_document": false}
+  ]
+}

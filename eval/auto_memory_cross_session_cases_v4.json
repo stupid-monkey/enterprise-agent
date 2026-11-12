@@ -1,0 +1,38 @@
+{
+  "version": "auto-memory-cross-session-v4",
+  "label_source": "developer-authored synthetic cases frozen before first model call on 2026-11-02",
+  "cases": [
+    {
+      "id": "explicit_named_handover",
+      "context": [],
+      "existing_auto": [["task", "长期负责门店巡检系统上线"]],
+      "text": "门店巡检系统上线已经移交同事，后面我不再跟进。",
+      "expected_kinds": [],
+      "expected_forget": ["task"]
+    },
+    {
+      "id": "ambiguous_that_project",
+      "context": [],
+      "existing_auto": [["task", "长期负责门店巡检系统上线"]],
+      "text": "那个项目结束了。",
+      "expected_kinds": [],
+      "expected_forget": []
+    },
+    {
+      "id": "question_about_completion",
+      "context": [],
+      "existing_auto": [["task", "长期负责门店巡检系统上线"]],
+      "text": "门店巡检系统上线已经结束了吗？",
+      "expected_kinds": [],
+      "expected_forget": []
+    },
+    {
+      "id": "different_named_task",
+      "context": [],
+      "existing_auto": [["task", "长期负责门店巡检系统上线"]],
+      "text": "财务平台迁移已经移交同事。",
+      "expected_kinds": [],
+      "expected_forget": []
+    }
+  ]
+}

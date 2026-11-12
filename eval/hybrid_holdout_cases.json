@@ -1,0 +1,22 @@
+[
+  {"name":"booking_same","role":"employee","question":"上海和北京的会议室预定规则一样吗？","expected_key":"office_booking","expected_fact":"规则相同"},
+  {"name":"rail_meal","role":"employee","question":"高铁出差每次餐补多少钱？","expected_key":"rail_travel","expected_fact":"八十元"},
+  {"name":"device_days","role":"employee","question":"备用笔记本最长能借几天？","expected_key":"device_loan","expected_fact":"五个工作日"},
+  {"name":"course_attempts","role":"employee","question":"合规课程每月考试有几次机会？","expected_key":"course_exam","expected_fact":"三次"},
+  {"name":"purchase_owner","role":"employee","question":"普通采购评审由谁召集？","expected_key":"purchase_review","expected_fact":"采购经理"},
+  {"name":"product_escalation","role":"product","question":"产品告警多久未恢复要升级？","expected_key":"product_alarm","expected_fact":"十五分钟"},
+  {"name":"receipt_archive","role":"finance","question":"财务收据每月什么时候归档？","expected_key":"finance_receipt","expected_fact":"第二个工作日"},
+  {"name":"ops_window","role":"operations","question":"生产维护窗口在什么时候？","expected_key":"ops_maintenance","expected_fact":"每周六凌晨两点"},
+  {"name":"secret_milestone","role":"product","question":"机密项目第一阶段几月验收？","expected_key":"secret_plan","expected_fact":"十一月"},
+  {"name":"other_rotation","role":"outsider","question":"夜班轮换周期是多久？","expected_key":"other_overtime","expected_fact":"两周"},
+  {"name":"parking_compare","role":"employee","question":"上海和北京的停车费标准一样吗？","expected_key":null},
+  {"name":"rail_monthly_cap","role":"employee","question":"高铁出差每月餐补最多报多少钱？","expected_key":null},
+  {"name":"device_reimbursement","role":"employee","question":"笔记本维修最多报销多少钱？","expected_key":null},
+  {"name":"course_pass_score","role":"employee","question":"合规课程考试多少分算通过？","expected_key":null},
+  {"name":"product_denied","role":"employee","question":"产品告警多久未恢复要升级？","expected_key":null},
+  {"name":"finance_denied","role":"product","question":"财务收据每月什么时候归档？","expected_key":null},
+  {"name":"secret_denied","role":"employee","question":"机密项目第一阶段几月验收？","expected_key":null},
+  {"name":"draft_denied","role":"employee","question":"每周哪天居家办公？","expected_key":null},
+  {"name":"other_org_denied","role":"employee","question":"另一组织夜班轮换周期是多久？","expected_key":null},
+  {"name":"area_mismatch","role":"product","question":"产品告警多久未恢复要升级？","area":"制度规范","expected_key":null}
+]

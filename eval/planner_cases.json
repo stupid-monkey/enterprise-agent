@@ -1,0 +1,62 @@
+[
+  {
+    "input": "帮我算一下25乘以8，然后告诉我公司报销多久到账？",
+    "expected_multistep": true,
+    "expected_actions": [
+      "calculator",
+      "knowledge_search"
+    ]
+  },
+  {
+    "input": "告诉我现在负责什么项目，然后查询一下公司的年假制度。",
+    "expected_multistep": true,
+    "expected_actions": [
+      "profile_query",
+      "knowledge_search"
+    ]
+  },
+  {
+    "input": "先帮我算100除以4，然后告诉我公司的福利政策。",
+    "expected_multistep": true,
+    "expected_actions": [
+      "calculator",
+      "knowledge_search"
+    ]
+  },
+  {
+    "input": "公司报销多久到账？",
+    "expected_multistep": false,
+    "expected_actions": [
+      "knowledge_search"
+    ]
+  },
+  {
+    "input": "我现在负责什么项目？",
+    "expected_multistep": false,
+    "expected_actions": [
+      "profile_query"
+    ]
+  },
+  {
+    "input": "25乘以8",
+    "expected_multistep": false,
+    "expected_actions": [
+      "calculator"
+    ]
+  },
+  {
+    "input": "你好",
+    "expected_multistep": false,
+    "expected_actions": [
+      "chat"
+    ]
+  },
+  {
+    "input": "查询公司的年假制度，并告诉我报销多久到账。",
+    "expected_multistep": true,
+    "expected_actions": [
+      "knowledge_search",
+      "knowledge_search"
+    ]
+  }
+]

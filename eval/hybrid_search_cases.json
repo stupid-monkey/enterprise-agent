@@ -1,0 +1,23 @@
+[
+  {"name": "travel_direct", "split": "calibration", "role": "employee", "question": "出差报销需要哪些审批？", "expected_id": "1", "expected_fact": "部门负责人审批"},
+  {"name": "travel_paraphrase", "split": "calibration", "role": "employee", "question": "员工出差产生费用后由谁签字审核？", "expected_id": "1", "expected_fact": "部门负责人审批"},
+  {"name": "leave_direct", "split": "calibration", "role": "employee", "question": "工作满一年有多少年假？", "expected_id": "2", "expected_fact": "5 天年假"},
+  {"name": "leave_paraphrase", "split": "calibration", "role": "employee", "question": "入职超过五年能休几天带薪假？", "expected_id": "2", "expected_fact": "10 天年假"},
+  {"name": "roadmap", "split": "calibration", "role": "manager", "question": "本季度产品迭代重点是什么？", "expected_id": "3", "expected_fact": "知识检索"},
+  {"name": "release", "split": "calibration", "role": "manager", "question": "产品上线之前要完成哪些检查？", "expected_id": "5", "expected_fact": "安全测试"},
+  {"name": "restricted", "split": "calibration", "role": "employee", "question": "产品上线之前要完成哪些检查？", "expected_id": null},
+  {"name": "admin_no_access", "split": "calibration", "role": "admin", "question": "出差报销需要哪些审批？", "expected_id": null},
+  {"name": "no_answer", "split": "calibration", "role": "employee", "question": "病假证明需要交给谁？", "expected_id": null},
+  {"name": "area_filter", "split": "calibration", "role": "manager", "question": "产品上线之前要完成哪些检查？", "area": "制度规范", "expected_id": null},
+  {"name": "travel_payment", "split": "holdout", "role": "employee", "question": "费用核准之后多久能打到员工账户？", "expected_id": "1", "expected_fact": "5 个工作日"},
+  {"name": "leave_five_years", "split": "holdout", "role": "employee", "question": "在公司工作五年以上每年能休多少天？", "expected_id": "2", "expected_fact": "10 天年假"},
+  {"name": "customer_priority", "split": "holdout", "role": "manager", "question": "客户最在意哪些高优先级需求？", "expected_id": "4", "expected_fact": "权限分级"},
+  {"name": "retrospective", "split": "holdout", "role": "manager", "question": "项目复盘需要记录哪些后续行动？", "expected_id": "6", "expected_fact": "下阶段负责人"},
+  {"name": "release_approval", "split": "holdout", "role": "manager", "question": "上线审批由谁负责完成？", "expected_id": "5", "expected_fact": "项目负责人"},
+  {"name": "remote_work", "split": "holdout", "role": "employee", "question": "远程办公每周可以申请几天？", "expected_id": null},
+  {"name": "housing", "split": "holdout", "role": "employee", "question": "住房补贴的发放标准是什么？", "expected_id": null},
+  {"name": "bonus", "split": "holdout", "role": "employee", "question": "年终奖按什么标准计算？", "expected_id": null},
+  {"name": "restricted_project", "split": "holdout", "role": "employee", "question": "产品路线图里部门试点怎么安排？", "expected_id": null},
+  {"name": "admin_leave", "split": "holdout", "role": "admin", "question": "员工每年的年假有多少天？", "expected_id": null},
+  {"name": "area_release", "split": "holdout", "role": "manager", "question": "产品发布检查需要哪些步骤？", "area": "制度规范", "expected_id": null}
+]

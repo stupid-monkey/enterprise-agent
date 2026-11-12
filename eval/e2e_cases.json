@@ -1,0 +1,209 @@
+[
+  {
+    "id": "knowledge_reimbursement",
+    "category": "single",
+    "input": "公司报销多久到账？",
+    "must_contain_all": [
+      "5个工作日",
+      "company_policy.txt",
+      "公司报销制度"
+    ],
+    "must_contain_any": [],
+    "must_not_contain": []
+  },
+  {
+    "id": "knowledge_annual_leave",
+    "category": "single",
+    "input": "公司的年假制度是什么？",
+    "must_contain_all": [
+      "5天",
+      "10天",
+      "company_policy.txt",
+      "年假制度"
+    ],
+    "must_contain_any": [],
+    "must_not_contain": []
+  },
+  {
+    "id": "knowledge_bonus",
+    "category": "single",
+    "input": "公司的年终奖根据什么发？",
+    "must_contain_all": [
+      "年度经营情况",
+      "绩效考核",
+      "company_policy.txt",
+      "薪酬福利制度"
+    ],
+    "must_contain_any": [],
+    "must_not_contain": []
+  },
+  {
+    "id": "calculator",
+    "category": "single",
+    "input": "25乘以8",
+    "must_contain_all": [
+      "200"
+    ],
+    "must_contain_any": [],
+    "must_not_contain": []
+  },
+  {
+    "id": "profile_task",
+    "category": "single",
+    "input": "我现在负责什么项目？",
+    "must_contain_all": [
+      "图像分割项目"
+    ],
+    "must_contain_any": [],
+    "must_not_contain": [
+      "answer_preference"
+    ]
+  },
+  {
+    "id": "ood_sick_leave",
+    "category": "ood",
+    "input": "公司的病假有多少天？",
+    "must_contain_all": [],
+    "must_contain_any": [
+      "没有找到可靠",
+      "没有可靠信息",
+      "无法回答",
+      "未找到可靠",
+      "知识库中没有"
+    ],
+    "must_not_contain": [
+      "病假5天",
+      "病假10天"
+    ]
+  },
+  {
+    "id": "ood_remote_work",
+    "category": "ood",
+    "input": "公司有没有远程办公制度？",
+    "must_contain_all": [],
+    "must_contain_any": [
+      "没有找到可靠",
+      "没有可靠信息",
+      "无法回答",
+      "未找到可靠",
+      "知识库中没有"
+    ],
+    "must_not_contain": [
+      "允许远程办公",
+      "支持远程办公"
+    ]
+  },
+  {
+    "id": "multi_calculator_rag",
+    "category": "multi",
+    "input": "帮我算一下25乘以8，然后告诉我公司报销多久到账？",
+    "must_contain_all": [
+      "200",
+      "5个工作日",
+      "company_policy.txt",
+      "公司报销制度"
+    ],
+    "must_contain_any": [],
+    "must_not_contain": []
+  },
+  {
+    "id": "multi_profile_rag",
+    "category": "multi",
+    "input": "告诉我现在负责什么项目，然后查询一下公司的年假制度。",
+    "must_contain_all": [
+      "图像分割项目",
+      "5天",
+      "10天",
+      "company_policy.txt",
+      "年假制度"
+    ],
+    "must_contain_any": [],
+    "must_not_contain": []
+  },
+  {
+    "id": "multi_two_knowledge",
+    "category": "multi",
+    "input": "查询公司的年假制度，并告诉我报销多久到账。",
+    "must_contain_all": [
+      "5天",
+      "10天",
+      "5个工作日",
+      "company_policy.txt"
+    ],
+    "must_contain_any": [],
+    "must_not_contain": []
+  },
+  {
+    "id":"hard_ood_sick_leave",
+    "category":"ood",
+    "input":"公司的病假有多少天？",
+    "must_contain_all":[],
+    "must_contain_any":[
+    "没有找到",
+    "无法回答",
+    "没有可靠"
+    ],
+    "must_not_contain":[
+    "5天",
+    "10天"
+    ]
+  },
+  {
+    "id":"hard_ood_stock",
+    "category":"ood",
+    "input":"公司的股票期权什么时候归属？",
+    "must_contain_all":[],
+    "must_contain_any":[
+    "没有找到",
+    "无法回答"
+    ],
+    "must_not_contain":[
+    "年终奖"
+    ]
+  },
+  {
+    "id":"hard_bonus_query",
+    "category":"single",
+    "input":"员工奖金信息在哪里查询？",
+    "must_contain_all":[
+    "人力资源部门",
+    "薪酬福利制度"
+    ],
+    "must_contain_any":[],
+    "must_not_contain":[]
+    },
+    {
+    "id":"hard_finance_time",
+    "category":"single",
+    "input":"财务审核完成之后多久可以收到钱？",
+    "must_contain_all":[
+    "5个工作日"
+    ],
+    "must_contain_any":[],
+    "must_not_contain":[]
+    },
+    {
+    "id":"hard_multi_three_steps",
+    "category":"multi",
+    "input":"告诉我我的岗位，然后算25乘8，最后查询公司报销多久到账",
+    "must_contain_all":[
+    "算法工程师",
+    "200",
+    "5个工作日"
+    ],
+    "must_contain_any":[],
+    "must_not_contain":[]
+    },
+    {
+    "id":"hard_multi_project_policy",
+    "category":"multi",
+    "input":"告诉我现在负责什么项目，然后查询公司的年假制度",
+    "must_contain_all":[
+    "图像分割项目",
+    "5天",
+    "10天"
+    ],
+    "must_contain_any":[],
+    "must_not_contain":[]
+    }
+]

@@ -1,0 +1,48 @@
+# Local configuration and credentials
+.env*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python, Node, and editor outputs
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+frontend/node_modules/
+frontend/dist/
+
+# User uploads, local databases, checkpoints, and generated previews
+data/
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.log
+*.tmp
+*.bak
+
+# Local tool state
+.codex/
+.agents/
+
+# Local reviewer exports and corrections
+eval/*user_submitted*.json
+eval/*user_corrected*.json
+eval/*human_score*.json
+
+# Publication snapshot: keep internal documents and generated evaluations local
+docs/
+prototype/
+eval/*.md
+eval/*.html
+eval/*.json
+!eval/*cases*.json
+!eval/*documents*.json
+eval/*/

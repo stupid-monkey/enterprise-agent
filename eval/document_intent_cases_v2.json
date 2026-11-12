@@ -1,0 +1,17 @@
+{
+  "dataset_version": "document-intent-synthetic-v2",
+  "cases": [
+    {"id": "v2_p01_release_script", "split": "holdout", "question": "按我们公司的上线核对事项，给明天的项目会备一段能直接讲的文字", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v2_p02_leave_handout", "split": "holdout", "question": "把内部休假规则改写为发给团队的新员工说明", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v2_p03_policy_brief", "split": "holdout", "question": "依照差旅政策出一版主管审核用的简要材料", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v2_p04_project_update", "split": "holdout", "question": "项目最近进展帮我写成能交给部门负责人的版本", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v2_p05_training_note", "split": "holdout", "question": "把公司的培训安排整出一页可直接共享的说明", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v2_p06_meeting_notes", "split": "holdout", "question": "根据企业资料形成一个供会上讨论的初版文字", "expected_intent": "knowledge", "expected_document": true},
+    {"id": "v2_n01_leave_days", "split": "holdout", "question": "我们公司年假满五年是多少天？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "v2_n02_policy_summary", "split": "holdout", "question": "把差旅制度的审批顺序简单整理给我看就好", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "v2_n03_prepare_requirement", "split": "holdout", "question": "报销前需要准备哪些凭证？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "v2_n04_report_reference", "split": "holdout", "question": "项目报告中提到的发布日期是哪天？", "expected_intent": "knowledge", "expected_document": false},
+    {"id": "v2_n05_public_template", "split": "holdout", "question": "给我一个不依赖公司资料的通用会议纪要模板", "expected_intent": "general", "expected_document": false},
+    {"id": "v2_n06_no_artifact", "split": "holdout", "question": "只回答我年假资格，不用整理材料", "expected_intent": "knowledge", "expected_document": false}
+  ]
+}

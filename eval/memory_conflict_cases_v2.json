@@ -1,0 +1,54 @@
+{
+  "version": "memory-conflicts-v2",
+  "label_source": "developer-authored new synthetic cases frozen before first model call on 2026-11-02",
+  "cases": [
+    {
+      "id": "explicit_role_negation",
+      "prior": {"kind": "role", "origin": "auto", "value": "数据分析师", "source_text": "我是数据分析师"},
+      "text": "我不再做数据分析师了。",
+      "expected_effect": "deleted"
+    },
+    {
+      "id": "role_question_not_assertion",
+      "prior": {"kind": "role", "origin": "auto", "value": "数据分析师", "source_text": "我是数据分析师"},
+      "text": "我不再做数据分析师了吗？",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "first_phase_done_overall_continues",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责客户门户改造", "source_text": "我长期负责客户门户改造"},
+      "text": "客户门户改造第一阶段已结束，但整体项目仍由我负责。",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "reported_completion_but_self_continues",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责客户门户改造", "source_text": "我长期负责客户门户改造"},
+      "text": "主管说客户门户改造已结束，不过我还在跟进。",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "exact_task_handover",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责客户门户改造", "source_text": "我长期负责客户门户改造"},
+      "text": "客户门户改造已经移交给运营团队。",
+      "expected_effect": "deleted"
+    },
+    {
+      "id": "near_name_different_project",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责客户门户改造", "source_text": "我长期负责客户门户改造"},
+      "text": "客户门户改版已经移交给运营团队。",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "synonym_without_literal_topic",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责应用系统升级工程", "source_text": "我长期负责应用系统升级工程"},
+      "text": "应用现代化这项工作已移交给同事。",
+      "expected_effect": "deleted"
+    },
+    {
+      "id": "manual_role_remains_user_controlled",
+      "prior": {"kind": "role", "origin": "manual", "value": "数据分析师", "source_text": ""},
+      "text": "我不再做数据分析师了。",
+      "expected_effect": "kept"
+    }
+  ]
+}

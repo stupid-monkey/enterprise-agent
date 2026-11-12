@@ -1,0 +1,9 @@
+[
+  {"name": "employee_travel", "role": "employee", "question": "差旅报销审批流程", "expected_ids": ["1"], "expected_fact": "部门负责人审批"},
+  {"name": "employee_leave", "role": "employee", "question": "员工年假标准", "expected_ids": ["2"], "expected_fact": "5 天年假"},
+  {"name": "manager_roadmap", "role": "manager", "question": "产品迭代路线图知识检索", "expected_ids": ["3"], "expected_fact": "知识检索"},
+  {"name": "manager_cross_source", "role": "manager", "question": "知识检索权限治理和文档生成", "expected_ids": ["3", "4"], "expected_fact": "知识检索"},
+  {"name": "employee_restricted", "role": "employee", "question": "产品发布前有哪些检查项？", "expected_ids": []},
+  {"name": "admin_no_business_access", "role": "admin", "question": "差旅报销审批流程", "expected_ids": []},
+  {"name": "employee_revoked", "role": "employee", "question": "差旅报销审批流程", "expected_ids": [], "deny_id": "1"}
+]

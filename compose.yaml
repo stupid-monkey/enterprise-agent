@@ -1,0 +1,144 @@
+name: enterprise-agent
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    environment:
+      APP_ENV: local
+      ENABLE_DEV_ACCOUNTS: "true"
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-6-sol}
+      CONDITION_MODEL: ${CONDITION_MODEL:-}
+      GENERAL_OPENAI_MODEL: ${GENERAL_OPENAI_MODEL:-gpt-4.1-mini}
+      GENERAL_API_STYLE: ${GENERAL_API_STYLE:-responses}
+      ENABLE_AI_INTENT_ROUTER: ${ENABLE_AI_INTENT_ROUTER:-true}
+      INTENT_MODEL: ${INTENT_MODEL:-gpt-6-luna}
+      INTENT_API_STYLE: ${INTENT_API_STYLE:-responses}
+      AUTO_MEMORY: ${AUTO_MEMORY:-true}
+      MEMORY_BACKEND: ${MEMORY_BACKEND:-sqlite}
+      CONVERSATION_BACKEND: ${CONVERSATION_BACKEND:-sqlite}
+      MEMORY_DATABASE_URL: ${MEMORY_DATABASE_URL:-}
+      MEMORY_SCHEMA: ${MEMORY_SCHEMA:-memory}
+      MEMORY_CUTOVER_MEMORY_SHA256: ${MEMORY_CUTOVER_MEMORY_SHA256:-}
+      MEMORY_CUTOVER_CONVERSATION_SHA256: ${MEMORY_CUTOVER_CONVERSATION_SHA256:-}
+      COLLABORATION_API_STYLE: ${COLLABORATION_API_STYLE:-responses}
+      UNSPLASH_ACCESS_KEY: ${UNSPLASH_ACCESS_KEY:-}
+      REDIS_CACHE_URL: ${REDIS_CACHE_URL:-}
+      SHADOW_INDEX_OUTBOX: ${SHADOW_INDEX_OUTBOX:-false}
+    volumes:
+      - app_data:/app/data
+    ports:
+      - "127.0.0.1:8001:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/readyz', timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped
+
+  redis-cache:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru"]
+    expose:
+      - "6379"
+    ports:
+      - "127.0.0.1:6382:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+  retrieval-db:
+    image: pgvector/pgvector:pg16
+    profiles: ["retrieval"]
+    environment:
+      POSTGRES_DB: agent_retrieval
+      POSTGRES_USER: agent_retrieval
+      POSTGRES_PASSWORD: local-retrieval-only
+    volumes:
+      - retrieval_data:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:55432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agent_retrieval -d agent_retrieval"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  memory-db:
+    image: postgres:16-alpine
+    profiles: ["memory"]
+    environment:
+      POSTGRES_DB: agent_memory_lab
+      POSTGRES_USER: agent_memory_lab
+      POSTGRES_PASSWORD: local-memory-lab-only
+    volumes:
+      - memory_lab_data:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:55433:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agent_memory_lab -d agent_memory_lab"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  memory-store:
+    image: postgres:16-alpine
+    profiles: ["memory-store"]
+    environment:
+      POSTGRES_DB: agent_memory
+      POSTGRES_USER: agent_memory
+      POSTGRES_PASSWORD: ${MEMORY_STORE_PASSWORD:-local-memory-store-only}
+    volumes:
+      - memory_store_data:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:55434:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agent_memory -d agent_memory"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  memory-monitor:
+    image: enterprise-agent-api
+    profiles: ["monitor"]
+    command: ["python", "-m", "app.api.memory_monitoring"]
+    environment:
+      MEMORY_DATABASE_URL: ${MEMORY_DATABASE_URL:-}
+      MEMORY_SCHEMA: ${MEMORY_SCHEMA:-memory}
+      CONVERSATION_BACKEND: ${CONVERSATION_BACKEND:-sqlite}
+      MEMORY_MONITOR_API_URL: ${MEMORY_MONITOR_API_URL:-http://api:8000/readyz}
+      MEMORY_MONITOR_SQLITE_PATH: /app/data/demo_conversations.sqlite3
+      MEMORY_MONITOR_INTERVAL_SECONDS: ${MEMORY_MONITOR_INTERVAL_SECONDS:-5}
+      MEMORY_MONITOR_MAX_PENDING: ${MEMORY_MONITOR_MAX_PENDING:-100}
+      MEMORY_MONITOR_MAX_AGE_SECONDS: ${MEMORY_MONITOR_MAX_AGE_SECONDS:-60}
+      MEMORY_MONITOR_WEBHOOK_URL: ${MEMORY_MONITOR_WEBHOOK_URL:-}
+    volumes:
+      - app_data:/app/data:ro
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8080:80"
+    restart: unless-stopped
+
+volumes:
+  app_data:
+  retrieval_data:
+  memory_lab_data:
+  memory_store_data:

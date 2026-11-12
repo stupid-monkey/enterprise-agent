@@ -1,0 +1,21 @@
+[
+  {"name":"relocation_deadline","role":"employee","question":"跨城市调岗后多久内申请搬迁补贴？","expected_key":"relocation","expected_fact":"三十天内"},
+  {"name":"visitor_return","role":"employee","question":"访客证什么时候交还？","expected_key":"visitor_badge","expected_fact":"离园当日"},
+  {"name":"account_lock_count","role":"employee","question":"密码输错几次账号会锁定？","expected_key":"account_lock","expected_fact":"连续五次"},
+  {"name":"course_week","role":"employee","question":"年度安全课程安排在几月第几周？","expected_key":"safety_course","expected_fact":"九月第二周"},
+  {"name":"release_stop","role":"product","question":"移动应用灰度发布何时停止放量？","expected_key":"mobile_release","expected_fact":"百分之四"},
+  {"name":"reconcile_day","role":"finance","question":"供应商对账每月第几个工作日完成？","expected_key":"supplier_reconcile","expected_fact":"第七个工作日"},
+  {"name":"alert_minutes","role":"operations","question":"核心服务告警多久未恢复要通知运维负责人？","expected_key":"alert_escalation","expected_fact":"十分钟"},
+  {"name":"secret_signature","role":"product","question":"保密项目合同最晚什么时候签署？","expected_key":"secret_contract","expected_fact":"十二月十五日前"},
+  {"name":"night_amount","role":"outsider","question":"另一组织夜班补贴每小时多少元？","expected_key":"other_night","expected_fact":"一百二十元"},
+  {"name":"relocation_monthly","role":"employee","question":"搬迁补贴每月能领多少元？","expected_key":null},
+  {"name":"badge_loss_fee","role":"employee","question":"访客证丢失要赔多少钱？","expected_key":null},
+  {"name":"account_unlock_time","role":"employee","question":"账号锁定后多久自动解锁？","expected_key":null},
+  {"name":"course_pass_score","role":"employee","question":"年度安全课程考试多少分及格？","expected_key":null},
+  {"name":"release_denied","role":"employee","question":"移动应用灰度发布何时停止放量？","expected_key":null},
+  {"name":"finance_denied","role":"product","question":"供应商对账每月第几个工作日完成？","expected_key":null},
+  {"name":"secret_denied","role":"employee","question":"保密项目合同最晚什么时候签署？","expected_key":null},
+  {"name":"other_org_denied","role":"employee","question":"另一组织夜班补贴每小时多少元？","expected_key":null},
+  {"name":"draft_denied","role":"employee","question":"周一弹性打卡能延后多久？","expected_key":null},
+  {"name":"area_mismatch","role":"product","question":"移动应用灰度发布何时停止放量？","area":"制度规范","expected_key":null}
+]

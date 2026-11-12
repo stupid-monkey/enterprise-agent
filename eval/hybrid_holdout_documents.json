@@ -1,0 +1,13 @@
+[
+  {"key":"office_booking","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"园区会议室预定规则","text":"上海和北京的会议室预定规则相同，员工须提前一个工作日申请。上海园区开放到晚上九点，北京园区提供访客接待。停车场由物业单独管理。","published":true},
+  {"key":"rail_travel","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"高铁出行补贴","text":"员工乘坐高铁出差时，每次可领取八十元餐补。票据应在返程后提交，跨月提交须说明原因。","published":true},
+  {"key":"device_loan","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"办公设备借用","text":"员工借用备用笔记本最长五个工作日，归还时由行政部门检查外观。本季度设备采购预算为两万元。","published":true},
+  {"key":"course_exam","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"合规课程安排","text":"合规课程每月提供三次线上考试机会，成绩由人事部门保存。补考申请需要部门负责人签字。","published":true},
+  {"key":"purchase_review","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"采购评审组织","text":"普通采购评审由采购经理召集，至少提前两天通知评审人员。会议记录在评审结束后归档。","published":true},
+  {"key":"product_alarm","org":"demo-org","department":"product","visibility":"department","area":"产品资料","title":"产品告警值班","text":"产品告警连续十五分钟未恢复时，由产品值班负责人升级给研发经理。升级后记录故障编号。","published":true},
+  {"key":"finance_receipt","org":"demo-org","department":"finance","visibility":"department","area":"财务资料","title":"财务收据归档","text":"财务收据由会计在每月第二个工作日完成归档。缺失收据时由经办人补充说明。","published":true},
+  {"key":"ops_maintenance","org":"demo-org","department":"operations","visibility":"department","area":"运维资料","title":"运维维护窗口","text":"生产系统维护窗口定在每周六凌晨两点，值班人员提前一天通知业务部门。","published":true},
+  {"key":"secret_plan","org":"demo-org","department":"product","visibility":"allowlist","area":"项目空间","title":"机密项目里程碑","text":"机密项目第一阶段在十一月完成验收，仅项目负责人可以查阅进度。","published":true},
+  {"key":"other_overtime","org":"other-org","department":"general","visibility":"organization","area":"制度规范","title":"另一组织夜班安排","text":"另一组织夜班轮换周期为两周，由部门排班员维护名单。","published":true},
+  {"key":"draft_remote","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"未发布的居家办公草案","text":"草案建议每周三为居家办公日，尚未通过审批。","published":false}
+]

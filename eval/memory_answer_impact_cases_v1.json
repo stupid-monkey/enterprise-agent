@@ -1,0 +1,9 @@
+{
+  "version": "memory-answer-impact-v1",
+  "label_source": "developer-authored synthetic probes",
+  "cases": [
+    {"id": "stale_role", "question": "我现在是产品经理。请用一句话解释状态机。", "profile": {"role": "设计师"}, "required": ["状态"], "forbidden": ["你是设计师", "作为设计师"]},
+    {"id": "irrelevant_task", "question": "请简要解释向量数据库是什么。", "profile": {"task": "长期负责数据平台迁移项目"}, "required": ["向量"], "forbidden": ["你负责", "你的迁移项目"]},
+    {"id": "latest_preference", "question": "只用一句话解释什么是状态机。", "profile": {"answer_preference": "以后回答我时请写很长的详细解释"}, "required": ["状态"], "forbidden": ["以下是详细解释", "首先，"]}
+  ]
+}

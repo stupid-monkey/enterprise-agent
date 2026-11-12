@@ -1,0 +1,14 @@
+[
+  {"key":"purchase","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"采购合同审批规范","text":"采购合同金额超过五十万元时，采购负责人应先取得法务意见，再交财务总监审批。审批完成的合同由采购专员在三个工作日内归档。","published":true},
+  {"key":"travel","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"差旅住宿报销标准","text":"员工出差住宿每晚报销上限为六百元，超标部分由本人承担。住宿发票需要在返程后十个工作日内提交。","published":true},
+  {"key":"training","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"新员工培训安排","text":"新员工入职后两周内完成信息安全培训，并通过线上考试。未通过考试的员工应在七天内补考。","published":true},
+  {"key":"product_release","org":"demo-org","department":"product","visibility":"department","area":"产品资料","title":"产品灰度发布检查","text":"产品灰度发布前，产品负责人要确认回滚开关和关键指标监控。灰度期间异常率连续十分钟超过百分之二时暂停放量。","published":true},
+  {"key":"product_roadmap","org":"demo-org","department":"product","visibility":"department","area":"产品资料","title":"产品季度路线图","text":"本季度先完成权限看板，再推进知识库搜索和移动端通知。路线图评审由产品委员会每月举行一次。","published":true},
+  {"key":"finance_close","org":"demo-org","department":"finance","visibility":"department","area":"财务资料","title":"月度关账操作说明","text":"财务团队每月第三个工作日完成费用核对，第五个工作日关闭上月账期。关账异常由财务经理在当天登记。","published":true},
+  {"key":"finance_invoice","org":"demo-org","department":"finance","visibility":"department","area":"财务资料","title":"发票异常处理流程","text":"供应商发票抬头错误时，财务专员应退回采购部门重新开具。重复发票必须在入账前标记并隔离。","published":true},
+  {"key":"ops_backup","org":"demo-org","department":"operations","visibility":"department","area":"运维资料","title":"数据库备份恢复演练","text":"运维团队每周日执行全量备份，每季度组织一次恢复演练。恢复演练结束后应保存校验记录。","published":true},
+  {"key":"secret_budget","org":"demo-org","department":"product","visibility":"allowlist","area":"项目空间","title":"机密项目预算","text":"机密项目本年度预算为八百万元，只允许项目负责人查阅。预算变更须经首席财务官批准。","published":true},
+  {"key":"other_org","org":"other-org","department":"general","visibility":"organization","area":"制度规范","title":"另一组织加班补贴制度","text":"另一组织夜间加班补贴为每小时一百元。","published":true},
+  {"key":"draft_policy","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"未发布的远程办公草案","text":"远程办公草案建议每周最多申请两天，当前尚未发布。","published":false},
+  {"key":"expense_card","org":"demo-org","department":"general","visibility":"organization","area":"制度规范","title":"企业卡费用核销","text":"企业卡刷卡后需要在月末上传交易凭证。遗失企业卡应立即向行政部门报备。","published":true}
+]

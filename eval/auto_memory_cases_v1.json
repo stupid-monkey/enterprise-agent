@@ -1,0 +1,16 @@
+{
+  "version": "auto-memory-v1",
+  "label_source": "developer-authored synthetic cases",
+  "cases": [
+    {"id": "role", "text": "我是产品设计师。", "expected_kinds": ["role"], "required_value_terms": {"role": "产品设计师"}},
+    {"id": "ongoing_task", "text": "我正在推进一个为期半年的知识库迁移项目。", "expected_kinds": ["task"], "required_value_terms": {"task": "知识库迁移"}},
+    {"id": "preference", "text": "以后回答我时，请先给结论，再列出依据。", "expected_kinds": ["answer_preference"], "required_value_terms": {"answer_preference": "先给结论"}},
+    {"id": "public_question", "text": "什么是向量数据库？", "expected_kinds": []},
+    {"id": "one_off", "text": "请把这句话改写得简短一些。", "expected_kinds": []},
+    {"id": "third_party", "text": "李明是项目经理，负责采购。", "expected_kinds": []},
+    {"id": "company_fact", "text": "我们公司的报销上限是500元。", "expected_kinds": []},
+    {"id": "temporary_preference", "text": "今天请用英文回答我。", "expected_kinds": []},
+    {"id": "role_change", "text": "我之前是设计师，现在是产品经理。", "expected_kinds": ["role"], "required_value_terms": {"role": "产品经理"}, "forbidden_value_terms": {"role": "之前"}},
+    {"id": "sensitive", "text": "我是设计师，密码是ABC123。", "expected_kinds": [], "expect_prefilter": true}
+  ]
+}

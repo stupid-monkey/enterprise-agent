@@ -1,0 +1,8 @@
+{
+  "version": "memory-profile-utility-v1",
+  "label_source": "developer-authored synthetic paired cases frozen before first run on 2026-11-04",
+  "cases": [
+    {"id": "role_recall", "question": "我之前告诉你的岗位是什么？如果没有记录就直说不知道。", "profile": {"role": "数据平台工程师"}, "required_with_profile": "数据平台工程师", "forbidden_without_profile": "数据平台工程师"},
+    {"id": "task_recall", "question": "我之前说过自己长期负责什么项目？如果没有记录就直说不知道。", "profile": {"task": "长期负责门店数据治理项目"}, "required_with_profile": "门店数据治理", "forbidden_without_profile": "门店数据治理"}
+  ]
+}

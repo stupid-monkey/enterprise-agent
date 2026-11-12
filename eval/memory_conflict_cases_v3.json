@@ -1,0 +1,42 @@
+{
+  "version": "memory-conflicts-v3",
+  "label_source": "developer-authored synthetic cases; replaces invalid v2 prior text before these six cases were called",
+  "cases": [
+    {
+      "id": "first_phase_done_overall_continues",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责员工门户改造", "source_text": "我长期负责员工门户改造"},
+      "text": "员工门户改造第一阶段已结束，但整体项目仍由我负责。",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "reported_completion_but_self_continues",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责员工门户改造", "source_text": "我长期负责员工门户改造"},
+      "text": "主管说员工门户改造已结束，不过我还在跟进。",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "exact_task_handover",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责员工门户改造", "source_text": "我长期负责员工门户改造"},
+      "text": "员工门户改造已经移交给运营团队。",
+      "expected_effect": "deleted"
+    },
+    {
+      "id": "near_name_different_project",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责员工门户改造", "source_text": "我长期负责员工门户改造"},
+      "text": "员工门户改版已经移交给运营团队。",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "synonym_without_literal_topic",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责应用系统升级工程", "source_text": "我长期负责应用系统升级工程"},
+      "text": "应用现代化这项工作已移交给同事。",
+      "expected_effect": "deleted"
+    },
+    {
+      "id": "manual_role_remains_user_controlled",
+      "prior": {"kind": "role", "origin": "manual", "value": "数据分析师", "source_text": ""},
+      "text": "我不再做数据分析师了。",
+      "expected_effect": "kept"
+    }
+  ]
+}

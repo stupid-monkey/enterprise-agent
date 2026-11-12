@@ -1,0 +1,83 @@
+[
+  {
+    "input": "公司的报销多久到账？",
+    "should_find": true,
+    "expected_section": "公司报销制度"
+  },
+  {
+    "input": "报销需要经过哪些审批？",
+    "should_find": true,
+    "expected_section": "公司报销制度"
+  },
+  {
+    "input": "财务审核完成后几天到账？",
+    "should_find": true,
+    "expected_section": "公司报销制度"
+  },
+  {
+    "input": "工作满1年有几天年假？",
+    "should_find": true,
+    "expected_section": "年假制度"
+  },
+  {
+    "input": "工作满5年有几天年假？",
+    "should_find": true,
+    "expected_section": "年假制度"
+  },
+  {
+    "input": "公司年终奖根据什么发？",
+    "should_find": true,
+    "expected_section": "薪酬福利制度"
+  },
+  {
+    "input": "年终奖金额会提前公布吗？",
+    "should_find": true,
+    "expected_section": "薪酬福利制度"
+  },
+  {
+    "input": "员工去哪里查询个人奖金信息？",
+    "should_find": true,
+    "expected_section": "薪酬福利制度"
+  },
+  {
+    "input": "公司有没有节假日福利？",
+    "should_find": true,
+    "expected_section": "员工福利制度"
+  },
+  {
+    "input": "福利具体内容以什么为准？",
+    "should_find": true,
+    "expected_section": "员工福利制度"
+  },
+
+  {
+    "input": "公司的股票期权怎么归属？",
+    "should_find": false,
+    "expected_section": null
+  },
+  {
+    "input": "公司的病假有多少天？",
+    "should_find": false,
+    "expected_section": null
+  },
+  {
+    "input": "公司有没有远程办公制度？",
+    "should_find": false,
+    "expected_section": null
+  },
+  {
+    "input": "公司食堂几点开门？",
+    "should_find": false,
+    "expected_section": null
+  },
+  {
+    "input": "公司的晋升制度是什么？",
+    "should_find": false,
+    "expected_section": null
+  },
+  {
+    "input": "公司是否提供住房补贴？",
+    "should_find": false,
+    "expected_section": null
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "version": "memory-conflicts-v1",
+  "label_source": "developer-authored synthetic cases frozen before first model call on 2026-11-02",
+  "cases": [
+    {
+      "id": "same_task_synonym_handover",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责数据仓库治理专项", "source_text": "我长期负责数据仓库治理专项"},
+      "text": "数仓治理这项工作已经移交给其他团队。",
+      "expected_effect": "deleted"
+    },
+    {
+      "id": "phase_done_but_task_continues",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责门店巡检系统上线", "source_text": "我长期负责门店巡检系统上线"},
+      "text": "门店巡检系统上线一期已经结束，二期继续由我负责。",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "similar_but_different_project",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责门店巡检系统上线", "source_text": "我长期负责门店巡检系统上线"},
+      "text": "设备巡检系统上线已经移交同事。",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "exact_topic_handover",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责流程优化项目", "source_text": "我长期负责流程优化项目"},
+      "text": "流程优化项目已移交同事。",
+      "expected_effect": "deleted"
+    },
+    {
+      "id": "ambiguous_project_reference",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责流程优化项目", "source_text": "我长期负责流程优化项目"},
+      "text": "上周那个项目就完成了。",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "new_role_replaces_old",
+      "prior": {"kind": "role", "origin": "auto", "value": "测试工程师", "source_text": "我是测试工程师"},
+      "text": "我现在改做产品经理了。",
+      "expected_effect": "replaced",
+      "required_after_terms": ["产品经理"]
+    },
+    {
+      "id": "old_role_ended_without_replacement",
+      "prior": {"kind": "role", "origin": "auto", "value": "测试工程师", "source_text": "我是测试工程师"},
+      "text": "我不再做测试工程师了。",
+      "expected_effect": "deleted"
+    },
+    {
+      "id": "answer_preference_replaced",
+      "prior": {"kind": "answer_preference", "origin": "auto", "value": "以后回答请用表格", "source_text": "以后回答请用表格"},
+      "text": "以后回答请尽量用三点列表。",
+      "expected_effect": "replaced",
+      "required_after_terms": ["三点列表"]
+    },
+    {
+      "id": "third_party_completion",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责门店巡检系统上线", "source_text": "我长期负责门店巡检系统上线"},
+      "text": "负责人说门店巡检系统上线已结束，但我的工作还在继续。",
+      "expected_effect": "kept"
+    },
+    {
+      "id": "hypothetical_completion",
+      "prior": {"kind": "task", "origin": "auto", "value": "长期负责门店巡检系统上线", "source_text": "我长期负责门店巡检系统上线"},
+      "text": "假设门店巡检系统上线已经结束，你会怎么写总结？",
+      "expected_effect": "kept"
+    }
+  ]
+}
